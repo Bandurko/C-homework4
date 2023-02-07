@@ -9,7 +9,7 @@ int[] GetArray(int num){
 }
 
 Console.Clear();
-Console.Write("Введите максимальное число в массиве: ");
+Console.Write("Введите максимальное число, которое может быть в массиве: ");
 int max = int.Parse(Console.ReadLine());
 int[] array = GetArray(max);
 Console.Write($"[{String.Join(", ", array)}]");
