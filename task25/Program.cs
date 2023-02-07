@@ -11,6 +11,7 @@ int  GetRad(int A, int B){
     return result;
 }
 
+
 Console.Clear();
 Console.Write ("Введите число возводимое в степень: ");
 int m = int.Parse (Console.ReadLine ());
