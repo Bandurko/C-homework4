@@ -10,6 +10,6 @@ int[] GetArray(int num){
 
 Console.Clear();
 Console.Write("Введите максимальное число в массиве: ");
-int n = int.Parse(Console.ReadLine());
-int[] array = GetArray(n);
+int max = int.Parse(Console.ReadLine());
+int[] array = GetArray(max);
 Console.Write($"[{String.Join(", ", array)}]");
