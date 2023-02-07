@@ -4,7 +4,7 @@
 // 2, 4 -> 16
 
 int  GetRad(int A, int B){
-    int result = 1;
+    int result = 2;
     for (int i = 1; i <= B; i++){
         result = result * A;
     }
