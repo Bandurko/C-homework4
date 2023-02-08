@@ -6,22 +6,23 @@
 
 // Важно: не использовать строки, использовать только арифметические действия.
 
-int GetNumbersSum(int num){ // n=3
-
-    int count = 0; // count 0
-    if (num < 0)
-        num *= (-1); // n = n * (-1) 
-    while (n > 0) // 0 > 0
+int GetNumbersSum(int n)
+{
+    int sum = 0;
+    int count = 0;
+    if (n < 0)
+        n *= (-1);
+    while (n > 0)
     {
-        n /= 10; // n = n / 10    n = 0
-        count++; // count 3
-        
+        sum = sum + (n % 10);
+        n /= 10;
+        count++;
     }
-    return count;
-
-    int result = 1;
-    for (int i = 2; i <= count; i++){ // i <= n; 2 <= 3
-        result *= i; // result
-    }
-    return result;
+    return sum;
 }
+
+Console.Clear();
+Console.Write("Введите число: ");
+int s = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"Сумма цифр числа {s} равна {GetNumbersSum(s)}");
