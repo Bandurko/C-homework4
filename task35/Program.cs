@@ -25,7 +25,7 @@ int[] GetRandomArray(int size, int minValue, int maxValue) // Метод (фун
 
 int indexSum = FindIndexSumSegment(10, 100); // Задает отрезок массив с заданными параметрами
 
-int FindIndexSumSegment(int startSegment, int endSegment) // Метод (функция), который находит и суммирует элементы массива на заданном отрезке
+int FindIndexSumSegment(int startSegment, int endSegment) // Метод (функция), который находит и суммирует количество элементов массива на заданном отрезке
 {
     int indexSum = 0;
     foreach (int index in array)
