@@ -44,5 +44,5 @@ int EvenNumbersInArray(int[] array) // Метод (функция) которы�
     return countevenNumbers;
 }
 
-int evenNumbers = EvenNumbersInArray(array);
+int evenNumbers = EvenNumbersInArray(array); // Присваивание переменной evenNumbers значения выполнения функции EvenNumbersInArray
 Console.WriteLine($"Количество чётных чисел в массиве из {len} элементов - {evenNumbers}"); // Выводит полученные данные в консоль
