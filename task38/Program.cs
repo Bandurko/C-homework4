@@ -7,15 +7,38 @@ Console.Clear();
 Console.Write("Введите количество элементов в массиве: "); // Вводим количество элементов массива
 int len = int.Parse(Console.ReadLine());
 
-int[] array = GetRandomArray(len, 0, 100); // Задает массив с заданными параметрами
+double[] array = GetRandomArray(len, 0, 100); // Задает массив с заданными параметрами
 
-int[] GetRandomArray(int size, int minValue, int maxValue) // Метод (функция) для генерации элементов массива по заданным параметрам
+double[] GetRandomArray(int size, int minValue, int maxValue) // Метод (функция) для генерации элементов массива (вещественных чисел (double)) по заданным параметрам
 {
-    int[] result = new int[size];
+    double[] result = new double[size];
     for (int i = 0; i < size; i++)
     {
-        result[i] = new Random().Next(minValue, maxValue);
+        Random x = new Random();
+        result[i] = Convert.ToDouble(x.Next(maxValue * 100 - minValue) / 100.0);
     }
 
     return result;
 }
+
+double GetDiffMaxMin(double[] array) // Метод нахождения разницы между максимальным и минимальным значениями элементов массива
+{
+    double max = array[0];
+    for (int j = 0; j < array.Length; j++){
+        if (array[j] > max) max = array[j];
+    }
+
+    double min = array[0];
+    for (int k = 0; k < array.Length; k++){
+        if (array[k] < min) min = array[k];
+    }
+
+    double diffmaxmin = max - min;
+
+    return diffmaxmin;
+
+}
+
+double diff = GetDiffMaxMin(array); // Присваивание переменной diff значения выполнения функции GetDiffMaxMin
+
+Console.WriteLine($"Разница между максимальным и минимальным элементами массива [{String.Join(" ",array)}] равна {diff:f2}"); // Выводим элементы массива и разницу между максимальным и минимальным элементпми этого массива
